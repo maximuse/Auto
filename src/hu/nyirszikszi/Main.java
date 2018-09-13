@@ -12,7 +12,7 @@ public class Main {
 		int min = 1950;
 		int max = 2018;
 		Random rand = new Random();
-        
+		
         for (int i = 0; i < db; i++) {
 			String marka = markak[rand.nextInt(markak.length)];
 			String kivitel = kivitelek[rand.nextInt(kivitelek.length)];
@@ -20,7 +20,7 @@ public class Main {
 			Autok pa = new Autok(evjarat, marka, kivitel);
 			parkoloAutok.add(pa);
         }
-        
+		
 		System.out.println();
 		listaz(parkoloAutok);
 		
@@ -41,7 +41,7 @@ public class Main {
 		parkoloAutok.get(0).setEvjarat(2018);
 		System.out.println(parkoloAutok.get(0));
 	}
-    
+	
     static public void listaz(ArrayList parkoloAutok) {
 		for (Object parkoloAuto : parkoloAutok) {
 			System.out.println(parkoloAuto);
