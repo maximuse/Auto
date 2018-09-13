@@ -14,12 +14,7 @@ public class Autok {
 	
 	@Override
 	public String toString() {
-		return "Autok{" +
-				"evjarat=" + evjarat +
-				", marka='" + marka + '\'' +
-				", szin='" + szin + '\'' +
-				", kivitel='" + kivitel + '\'' +
-				'}';
+		return "Autok{" + "evjarat=" + evjarat + ", marka='" + marka + "', szin='" + szin + "', kivitel='" + kivitel + "'}";
 	}
 	
 	protected void setEvjarat(int evjarat) {

@@ -5,7 +5,7 @@ import java.util.Random;
 
 public class Main {
     public static void main(String[] args) {
-		ArrayList<Autok> parkoloAutok = new ArrayList();
+		ArrayList<Autok> parkoloAutok = new ArrayList<>();
 		String[] markak = {"Aston Martin", "Bentley", "Bugatti", "Maserati", "Ferrari", "Porsche", "Lamborghini", "Jaguar", "Tesla", "Koenigsegg", "McLaren", "Rolls-Royce", "Pagani"};
 		String[] kivitelek = {"cabrio", "coupe", "sport", "sedan"};
 		int db = 10;
@@ -20,22 +20,22 @@ public class Main {
 			Autok pa = new Autok(evjarat, marka, kivitel);
 			parkoloAutok.add(pa);
         }
-	
+        
 		System.out.println();
 		listaz(parkoloAutok);
-  
+		
 		parkoloAutok.get(0).setSzin("ezüst");
 		System.out.println();
 		System.out.println("Autok[marka='" + parkoloAutok.get(0).marka + "', szin='" + parkoloAutok.get(0).szin + "', kivitel='" + parkoloAutok.get(0).kivitel + "']");
-	
+		
 		System.out.println();
 		listaz(parkoloAutok);
 		
 		parkoloAutok.add(0, new Autok(2017, "Ferrari", "sport"));
-	
+		
 		System.out.println();
 		listaz(parkoloAutok);
-	
+		
 		System.out.println();
 		System.out.println(parkoloAutok.get(0));
 		parkoloAutok.get(0).setEvjarat(2018);
