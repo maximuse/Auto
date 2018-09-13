@@ -8,6 +8,7 @@ public class Main {
 		ArrayList<Autok> parkoloAutok = new ArrayList<>();
 		String[] markak = {"Aston Martin", "Bentley", "Bugatti", "Maserati", "Ferrari", "Porsche", "Lamborghini", "Jaguar", "Tesla", "Koenigsegg", "McLaren", "Rolls-Royce", "Pagani"};
 		String[] kivitelek = {"cabrio", "coupe", "sport", "sedan"};
+		String[] szinek = {"piros", "zöld", "kék", "cián", "magenta", "sárga", "fekete"};
 		int db = 10;
 		int min = 1950;
 		int max = 2018;
@@ -24,28 +25,30 @@ public class Main {
 		System.out.println();
 		listaz(parkoloAutok);
 		
-		parkoloAutok.get(0).setSzin("ezüst");
+		int index = rand.nextInt(parkoloAutok.size());
+		parkoloAutok.get(index).setSzin(szinek[rand.nextInt(szinek.length)]);
 		System.out.println();
-		System.out.println("Autok[marka='" + parkoloAutok.get(0).marka + "', szin='" + parkoloAutok.get(0).szin + "', kivitel='" + parkoloAutok.get(0).kivitel + "']");
+		System.out.println("Autok{marka='" + parkoloAutok.get(index).getMarka() + "', szin='" + parkoloAutok.get(index).getSzin() + "', kivitel='" + parkoloAutok.get(index).getKivitel() + "'}");
 		
 		System.out.println();
 		listaz(parkoloAutok);
 		
-		parkoloAutok.add(0, new Autok(2017, "Ferrari", "sport"));
-		
+		parkoloAutok.add(0, new Autok(2018, "Ferrari", "sport"));
+		parkoloAutok.get(0).setSzin("piros");
 		System.out.println();
 		listaz(parkoloAutok);
 		
 		System.out.println();
 		System.out.println(parkoloAutok.get(0));
-		parkoloAutok.get(0).setEvjarat(2018);
+		parkoloAutok.get(0).setEvjarat(rand.nextInt((max - min) + 1) + min);
 		System.out.println(parkoloAutok.get(0));
 	}
 	
-    static public void listaz(ArrayList parkoloAutok) {
+    static private void listaz(ArrayList parkoloAutok) {
 		for (Object parkoloAuto : parkoloAutok) {
 			System.out.println(parkoloAuto);
 		}
+		
 		System.out.println(parkoloAutok.size());
 	}
 }

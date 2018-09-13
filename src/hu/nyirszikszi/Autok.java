@@ -1,12 +1,12 @@
 package hu.nyirszikszi;
 
 public class Autok {
-	int evjarat;
-	String marka;
-	String szin = null;
-	String kivitel;
+	private int evjarat;
+	private String marka;
+	private String szin = null;
+	private String kivitel;
 	
-	public Autok(int evjarat, String marka, String kivitel) {
+	Autok(int evjarat, String marka, String kivitel) {
 		this.evjarat = evjarat;
 		this.marka = marka;
 		this.kivitel = kivitel;
@@ -17,11 +17,23 @@ public class Autok {
 		return "Autok{" + "evjarat=" + evjarat + ", marka='" + marka + "', szin='" + szin + "', kivitel='" + kivitel + "'}";
 	}
 	
-	protected void setEvjarat(int evjarat) {
+	void setEvjarat(int evjarat) {
 		this.evjarat = evjarat;
 	}
 	
-	protected void setSzin(String szin) {
+	String getMarka() {
+		return marka;
+	}
+	
+	String getSzin() {
+		return szin;
+	}
+	
+	void setSzin(String szin) {
 		this.szin = szin;
+	}
+	
+	String getKivitel() {
+		return kivitel;
 	}
 }
